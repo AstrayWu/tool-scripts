@@ -49,3 +49,13 @@ from audio_utils.audio_utils import convert_to_32bit_pcm, add_noise
 ```bash
 python audio_utils/check_audio_issues.py ./audio both 50.0
 ```
+
+### dvr_cropper — 行车记录仪随手拍
+
+从行车记录仪 MP4 视频中 OCR 提取 GPS 坐标，按日期归档，生成 ffmpeg 裁剪脚本（30s → 6s 片段 + 三张截图）。
+
+依赖：`opencv-python easyocr`
+
+```bash
+python dvr_cropper/python_suishoupai.py /path/to/videos '*.MP4'
+```
